@@ -11,7 +11,7 @@ class Band < ActiveRecord::Base
     end
 
     def self.most_performances
-        
+        self.all.max_by {|b| b.concerts.size}
     end
 
 

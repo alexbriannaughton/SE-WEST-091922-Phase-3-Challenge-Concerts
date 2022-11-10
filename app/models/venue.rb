@@ -7,11 +7,6 @@ class Venue < ActiveRecord::Base
     end
 
     def most_frequent_band
-        # self.concerts.max_by {|i| self.concerts.band_id.count(i)}
-
-        # c =self.concerts.max_by {|a| a.band_id.size}
-        # c.band
-
-        # self.concerts.group(:band_id).select(:band_id).order("count(*) DESC").first.band
+        self.bands.max_by {|a| a.concerts.count}
     end
 end
