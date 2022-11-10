@@ -15,10 +15,12 @@ la_band = Band.create(name: "Muna", hometown: "LA")
 chi_band = Band.create(name: "Noname", hometown: "Chicago")
 
 puts "Creating Concerts..."
-# ****************************************************************
-# * TODO: create concerts! Remember, a concert belongs to a band *
-# * and a concert belongs to a venue.                            *
-# ****************************************************************
-# Create concerts Here
+
+Concert.create(date: "1", band: ny_band, venue: la_venue)
+Concert.create(date: "2", band: la_band, venue: chi_venue)
+Concert.create(date: "6", band: la_band, venue: la_venue)
+Concert.create(date: "5", band: ny_band, venue: nyc_venue)
+Concert.create(date: "3", band: chi_band, venue: chi_venue)
+Concert.create(date: "4", band: chi_band, venue: nyc_venue)
 
 puts "Seeding done!"
